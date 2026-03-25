@@ -2,42 +2,77 @@ body{
     background-color:hsl(321, 74%, 80%) ;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+#note{
+     color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    background-color: hsl(287, 44%, 52%);
+    box-shadow: 0 6px 0 hsl(287, 58%, 37%);
+    border-radius: 20px;
+    padding: 15px 25px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
 
 .owl{
-    margin: 30px auto;
-    padding: 20px;
-    width: 700px;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    animation: pulseColor 2s infinite;
     
 }
+.owl:hover {
+ 
+    transform: scale(1.05);
+    
+}
+
+
+
+.owl img{
+      width: 600px;
+   transform: translateY(-50px,);
+}
 .container {
-  margin: 50px auto;
-    padding: 30px;
-    width: 600px;
-    justify-items: center;
+   margin: 10px auto;
+  padding: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
 }
-.speech{
-    color: white;
-    font-size: 3rem;
+.container p {
+     color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  background-color: hsl(287, 44%, 52%);
+   box-shadow: 0 6px 0 hsl(287, 58%, 37%);
+  border-radius: 20px;
+  padding: 15px 25px;
+  position: relative;
+  text-align: center;
 }
+
 #display{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap:10px;
+    justify-content: center;
+    gap:15px;
     margin-top: 50px;
-    width: 200px;
+    transform: translateY(-20px);
 
 }
  button{
-  font-size: 2rem;
+    
+  font-size: 1.5rem;
   color: azure;
    border: none;
    width: 200px;
-   padding:15px 30px;
-   margin: 20px;
+   padding:10px 70px;
    border-radius: 20px;
    cursor: pointer;
+   font-weight: bold;
    transition: transform 0.1s;
  }
 
@@ -50,4 +85,8 @@ body{
   box-shadow: 0 6px 0 hsl(287, 58%, 37%);
  }
 
+
+ .hidden{
+    display:none
+ }
 

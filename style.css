@@ -4,25 +4,50 @@ body{
 }
 
 .owl{
-    margin: 50px auto;
-    padding: 30px;
+    margin: 30px auto;
+    padding: 20px;
     width: 700px;
     justify-items: center;
     
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+  margin: 50px auto;
+    padding: 30px;
+    width: 600px;
+    justify-items: center;
 }
+.speech{
+    color: white;
+    font-size: 3rem;
+}
+#display{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:10px;
+    margin-top: 50px;
+    width: 200px;
+
+}
+ button{
+  font-size: 2rem;
+  color: azure;
+   border: none;
+   width: 200px;
+   padding:15px 30px;
+   margin: 20px;
+   border-radius: 20px;
+   cursor: pointer;
+   transition: transform 0.1s;
+ }
 
  #yesBtn{
-  
+   background-color: hsl(287, 44%, 52%);
+   box-shadow: 0 6px 0 hsl(287, 58%, 37%);
  }
  #noBtn{
-
+ background-color: hsl(287, 44%, 52%);
+  box-shadow: 0 6px 0 hsl(287, 58%, 37%);
  }
 
 

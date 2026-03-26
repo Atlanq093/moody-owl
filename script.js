@@ -34,8 +34,27 @@ setInterval(() => {
 }, 3000); // zmiana co 3 sekundy
 }
 function answerNo(){
-    question.textContent="Nuh uh?";
+     const texts = [
+        "Nuh uh?",
+        "Are you sure?",
+        "Think twice!",
+        "Please please say yes 🥺"
+    ];
+
+    const randomIndex = Math.floor(Math.random() * texts.length);
+    question.textContent = texts[randomIndex];
+
     owl.src ="images/3.png"
+    moveButton(); 
     yesBtn.classList.add('hidden');
     noBtn.classList.add('hidden');
+}
+function moveButton() {
+    noBtn.addEventListener("mouseover", moveButton);
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
 }

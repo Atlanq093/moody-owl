@@ -10,8 +10,8 @@ body {
     color: white;
     font-size: clamp(1.2rem, 4vw, 2.5rem);
     font-weight: bold;
-    background-color: hsl(287, 44%, 52%);
-    box-shadow: 0 6px 0 hsl(287, 58%, 37%);
+    background-color: hsl(287, 35%, 69%);
+    box-shadow: 0 6px 0 hsl(287, 16%, 33%);
     border-radius: 20px;
     padding: 15px 25px;
     text-align: center;
@@ -64,7 +64,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 100px;
     margin-top: 30px;
     transform: translateY(-20px);
     width: 100%;
@@ -88,12 +88,16 @@ button {
     background-color: hsl(287, 44%, 52%);
     box-shadow: 0 6px 0 hsl(287, 58%, 37%);
     width: clamp(100px, 25vw, 200px);
+     z-index: 1;
+      width: 150px;
 }
 
 #noBtn {
     background-color: hsl(287, 44%, 52%);
     box-shadow: 0 6px 0 hsl(287, 58%, 37%);
     width: clamp(75px, 20vw, 120px);
+     z-index: 10;
+      width: 150px;
 }
 
 .hidden {

@@ -15,13 +15,13 @@ owl.addEventListener('click',()=>{
 
 
 function answeryes(){
-    question.textContent="See you soon 😍";
+    question.textContent="I knew it see you soon😍";
     owl.src ="images/2.png"
     yesBtn.classList.add('hidden');
     noBtn.classList.add('hidden');
 }
 function answerNo(){
-    question.textContent="Nuh uh?";
+    question.textContent="Think twice,are you sure";
     owl.src ="images/3.png"
     yesBtn.classList.add('hidden');
     noBtn.classList.add('hidden');

@@ -31,7 +31,7 @@ function answeryes(){
 let clickCount=0
 let yesScale = 1;
 function answerNo(){
-    owl.addEventListener('click', owlClick);
+   
     owl.src ="images/3.png"
     clickCount++
 
@@ -49,30 +49,30 @@ function answerNo(){
      } else if (clickCount===5){
             question.textContent="Please agree 🤕"
         }
-        else if (clickCount===5){
+        else if (clickCount===6){
             question.textContent="Please agree 🤕"
         }
-        else if (clickCount===6){
+        else if (clickCount===8){
              question.textContent = "I'm begging you... 🙏";
         }
-        else if (clickCount===7){
+        else if (clickCount===9){
                question.textContent = "You're breaking my heart 💔";
         }
-         else if (clickCount === 8) {
+         else if (clickCount === 10) {
         question.textContent = "Are you sure? 😳";
-    } else if (clickCount === 9) {
+    } else if (clickCount === 11) {
         question.textContent = "I will cry... 😭";
-    } else if (clickCount === 10) {
-        question.textContent = "This is not okay 😤";
-    } else if (clickCount === 11) {s
-        question.textContent = "I thought you liked me... 🥀";
     } else if (clickCount === 12) {
-        question.textContent = "One more chance? 🫶";
+        question.textContent = "This is not okay 😤";
     } else if (clickCount === 13) {
-        question.textContent = "I made you a playlist and everything... 🎵";
+        question.textContent = "I thought you liked me... 🥀";
     } else if (clickCount === 14) {
-        question.textContent = "My owl is also sad now 🦉💔";
+        question.textContent = "One more chance? 🫶";
     } else if (clickCount === 15) {
+        question.textContent = "I made you a playlist and everything... 🎵";
+    } else if (clickCount === 16) {
+        question.textContent = "My owl is also sad now 🦉💔";
+    } else if (clickCount === 17) {
         question.textContent = "Last chance I promise... 🥹";}
     else{
         question.textContent ="Click yes ,please 😰"

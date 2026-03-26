@@ -30,6 +30,7 @@ function answeryes(){
 }
 let clickCount=0
 function answerNo(){
+    owl.src ="images/3.png"
     clickCount++
 
     if(clickCount===1){
@@ -38,10 +39,20 @@ function answerNo(){
         question.textContent = "Why are you doing this to me? 😢";
     } else if (clickCount === 3) {
         question.textContent = "No please, think again... 💔";
-    } 
-
-    owl.src ="images/3.png"
-    moveButton(); 
-    yesBtn.classList.add('hidden');
-    noBtn.classList.add('hidden');
+    } else if (clickCount === 4) {
+        question.textContent = "Wait,wait no ... 😨";
+    } else{
+        question.textContent ="Click yes ,please 🤕"
+        noBtn.addEventListener("mouseover", moveButton); 
+    moveButton()
+} 
+  
 }
+function moveButton() {
+    const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+    const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+    noBtn.style.position = "absolute";
+    noBtn.style.left = x + "px";
+    noBtn.style.top = y + "px";
+}
+

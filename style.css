@@ -23,7 +23,7 @@ body {
     display: flex;
     justify-content: center;
     cursor: pointer;
-    animation: pulseColor 2s infinite;
+  
 }
 
 .owl:hover {

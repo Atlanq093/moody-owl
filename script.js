@@ -47,7 +47,7 @@ function answeryes(){
 
 let clickCount = 0;
 let yesScale = 1;
-
+Z
 function answerNo(){
     owl.src = "images/3.png";
 

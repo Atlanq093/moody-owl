@@ -78,5 +78,7 @@ function answerNo(){
        
       
 }  yesBtn.style.transform = `scale(${1 + clickCount * 0.2})`;
+   let scale = 1 - clickCount * 0.05;
+noBtn.style.transform = `scale(${Math.max(scale, 0.4)})`;
   
 }

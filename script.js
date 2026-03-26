@@ -6,12 +6,14 @@ const noBtn = document.getElementById('noBtn');
 
 
 
-owl.addEventListener('click',()=>{
+function owlClick() {
     note.classList.add('hidden');
     question.classList.remove('hidden');
     yesBtn.classList.remove('hidden');
-    noBtn.classList.remove('hidden')
-})
+    noBtn.classList.remove('hidden');
+}
+
+owl.addEventListener('click', owlClick);
 
 
 function answeryes(){
@@ -19,10 +21,27 @@ function answeryes(){
     owl.src ="images/2.png"
     yesBtn.classList.add('hidden');
     noBtn.classList.add('hidden');
+   owl.removeEventListener('click', owlClick); 
+  setTimeout(() => {
+    document.body.style.backgroundImage = "url('https://usagif.com/wp-content/uploads/gif-heart-39.gif')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundPosition = "center";
+}, 1000);
 }
+let clickCount=0
 function answerNo(){
-    question.textContent="Think twice,are you sure";
+    clickCount++
+
+    if(clickCount===1){
+        question.textContent="Why? 🥺";
+    } else if (clickCount === 2) {
+        question.textContent = "Why are you doing this to me? 😢";
+    } else if (clickCount === 3) {
+        question.textContent = "No please, think again... 💔";
+    } 
+
     owl.src ="images/3.png"
+    moveButton(); 
     yesBtn.classList.add('hidden');
     noBtn.classList.add('hidden');
 }

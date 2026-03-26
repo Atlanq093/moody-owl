@@ -78,7 +78,7 @@ function answerNo(){
         question.textContent ="Click yes ,please 😰"
        
       
-} yesScale += 0.1; // rośnie o 20% za każdym kliknięciem
+} yesScale += 0.1; 
     yesBtn.style.transform = `scale(${yesScale})`;
     yesBtn.style.transformOrigin = 'center';
    

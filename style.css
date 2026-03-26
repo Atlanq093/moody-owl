@@ -1,13 +1,14 @@
-body{
-    background-color:hsl(321, 74%, 80%) ;
+body {
+    background-color: hsl(321, 74%, 80%);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
-#note{
-     color: white;
-    font-size: 2.5rem;
+
+#note {
+    color: white;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
     font-weight: bold;
     background-color: hsl(287, 44%, 52%);
     box-shadow: 0 6px 0 hsl(287, 58%, 37%);
@@ -15,103 +16,150 @@ body{
     padding: 15px 25px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
 }
 
-.owl{
+.owl {
     display: flex;
     justify-content: center;
     cursor: pointer;
     animation: pulseColor 2s infinite;
-    
 }
+
 .owl:hover {
     transform: scale(1.05);
 }
 
-
-
-.owl img{
-      width: 600px;
-   transform: translateY(-50px,);
+.owl img {
+    width: min(80vw, 500px);
+    transform: translateY(-30px);
 }
+
 .container {
-   margin: 10px auto;
-  padding: 10px;
-  width: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0px;
-}
-.container p {
-     color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  background-color: hsl(287, 44%, 52%);
-   box-shadow: 0 6px 0 hsl(287, 58%, 37%);
-  border-radius: 20px;
-  padding: 15px 25px;
-  position: relative;
-  text-align: center;
+    margin: 10px auto;
+    padding: 10px;
+    width: min(90vw, 500px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    box-sizing: border-box;
 }
 
-#display{
+.container p {
+    color: white;
+    font-size: clamp(1.1rem, 4vw, 2.5rem);
+    font-weight: bold;
+    background-color: hsl(287, 44%, 52%);
+    box-shadow: 0 6px 0 hsl(287, 58%, 37%);
+    border-radius: 20px;
+    padding: 15px 25px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#display {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:100px;
-    margin-top: 50px;
+    gap: 15px;
+    margin-top: 30px;
     transform: translateY(-20px);
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow: visible;
 }
- button{
-    
-  font-size: 1.5rem;
-  color: azure;
-   border: none;
-   width: 200px;
-   padding:10px 70px;
-   border-radius: 20px;
-   cursor: pointer;
-   font-weight: bold;
-   transition: transform 0.1s;
- }
 
- #yesBtn{
-   background-color: hsl(287, 44%, 52%);
-   box-shadow: 0 6px 0 hsl(287, 58%, 37%);
- }
- #noBtn{
- background-color: hsl(287, 44%, 52%);
-  box-shadow: 0 6px 0 hsl(287, 58%, 37%);
+button {
+    font-size: clamp(0.9rem, 3vw, 1.5rem);
+    color: azure;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
 
-  
- }
+#yesBtn {
+    background-color: hsl(287, 44%, 52%);
+    box-shadow: 0 6px 0 hsl(287, 58%, 37%);
+    width: clamp(100px, 25vw, 200px);
+}
 
+#noBtn {
+    background-color: hsl(287, 44%, 52%);
+    box-shadow: 0 6px 0 hsl(287, 58%, 37%);
+    width: clamp(75px, 20vw, 120px);
+}
 
- .hidden{
-    display:none
- }
+.hidden {
+    display: none;
+}
 
-@media (max-width: 600px){
-
-    #note,
-    .container p{
-        font-size: 1.5rem;
-        padding: 10px 15px;
+/* Galaxy S21/S22 */
+@media (max-width: 360px) {
+    .owl img {
+        width: 92vw;
+        transform: translateY(-15px);
     }
 
-    .owl img{
-        max-width: 300px;
+    .container {
+        width: 95vw;
+        padding: 5px;
+    }
+
+    #display {
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}
+
+/* iPhone 13/14 */
+@media (min-width: 361px) and (max-width: 390px) {
+    .owl img {
+        width: 88vw;
         transform: translateY(-20px);
     }
 
-    #display{
-        flex-direction: column;
-        gap: 20px;
+    #display {
+        gap: 12px;
+        margin-top: 20px;
+    }
+}
+
+/* iPhone 14 Pro Max / 15 / 16 / 17 */
+@media (min-width: 391px) and (max-width: 430px) {
+    .owl img {
+        width: 85vw;
+        transform: translateY(-25px);
     }
 
-    button{
-        width: 80%;
-        font-size: 1.2rem;
+    #display {
+        gap: 15px;
+        margin-top: 25px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 600px) {
+    .owl img {
+        width: 500px;
+        transform: translateY(-50px);
+    }
+
+    .container {
+        width: 500px;
+    }
+
+    button {
+        padding: 10px 30px;
     }
 }

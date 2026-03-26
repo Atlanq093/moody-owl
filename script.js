@@ -29,6 +29,7 @@ function answeryes(){
 }, 500);
 }
 let clickCount=0
+let yesScale = 1;
 function answerNo(){
     owl.addEventListener('click', owlClick);
     owl.src ="images/3.png"
@@ -63,7 +64,7 @@ function answerNo(){
         question.textContent = "I will cry... 😭";
     } else if (clickCount === 10) {
         question.textContent = "This is not okay 😤";
-    } else if (clickCount === 11) {
+    } else if (clickCount === 11) {s
         question.textContent = "I thought you liked me... 🥀";
     } else if (clickCount === 12) {
         question.textContent = "One more chance? 🫶";
@@ -77,8 +78,9 @@ function answerNo(){
         question.textContent ="Click yes ,please 😰"
        
       
-}  yesBtn.style.transform = `scale(${1 + clickCount * 0.2})`;
-   let scale = 1 - clickCount * 0.05;
-noBtn.style.transform = `scale(${Math.max(scale, 0.4)})`;
+} yesScale += 0.1; // rośnie o 20% za każdym kliknięciem
+    yesBtn.style.transform = `scale(${yesScale})`;
+    yesBtn.style.transformOrigin = 'center';
+   
   
 }

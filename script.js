@@ -20,18 +20,21 @@ function answeryes(){
     yesBtn.classList.add('hidden');
     noBtn.classList.add('hidden');
     owl.removeEventListener('click');
-    const backgrounds = [
-  "https://usagif.com/wp-content/uploads/gif-heart-39.gif",
-  "https://usagif.com/wp-content/uploads/gif-heart-38.gif",
-  "https://usagif.com/wp-content/uploads/gif-heart-37.gif"
-];
+  const backgrounds = [
+        "https://usagif.com/wp-content/uploads/gif-heart-39.gif",
+        "https://usagif.com/wp-content/uploads/gif-heart-38.gif",
+        "https://usagif.com/wp-content/uploads/gif-heart-37.gif"
+    ];
 
-let index = 0;
+    let index = 0;
 
-setInterval(() => {
-  document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
-  index = (index + 1) % backgrounds.length;
-}, 3000); // zmiana co 3 sekundy
+    setInterval(() => {
+        document.body.style.backgroundImage = `url('${backgrounds[index]}')`;
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+
+        index = (index + 1) % backgrounds.length;
+    }, 3000);
 }
 function answerNo(){
      const texts = [
